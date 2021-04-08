@@ -132,12 +132,12 @@ columns=fullflexible
 Download all python codes from 
 %
 \begin{lstlisting}
-................................................
+https://github.com/rajasekhar156/Assignment-5/blob/main/main.tex
 \end{lstlisting}
 and latex codes from
 %
 \begin{lstlisting}
-................................................
+https://github.com/rajasekhar156/Assignment-5/blob/main/main.tex
 \end{lstlisting}
 \section*{QUESTION}
 Let X$_{1}$ and X$_{2}$ be a random sample of size two
@@ -153,6 +153,7 @@ the maximum likelihood estimate of $\theta$ is
     \item 1
     \item not unique
 \end{enumerate}
+\section*{ANSWER}
 Given X$_{1}=$0, X$_{2}=$2 and
 \begin{align}
     f_{\theta}(x) =\theta \dfrac{1}{\sqrt{2\pi}} e^{-\dfrac{1}{2} x^{2}} + ( 1-\theta)\dfrac{1}{2}e^{-\mid x\mid}
@@ -163,9 +164,20 @@ Then log of likelihood function is given by
 l(\theta) &= \sum_{i=1}^{i=n} \log f_{\theta}(x_{i})\\
 &= \log f_{\theta}(x_{1}) + \log f_{\theta}(x_{2}) \\
 &=\log(\theta\dfrac{1}{\sqrt{2\pi}}e^{-\dfrac{1}{2}0^{2}}+(1-\theta)\dfrac{1}{2}
-e^{-\mid 0\mid})\nonumber\\&\hspace{0.75cm}+\log(\theta\dfrac{1}{\sqrt{2\pi}} e^{-\dfrac{1}{2}2^{2}}+(1-\theta)\dfrac{1}{2}e^{-\mid 2\mid}) \\ 
-&=\log(\theta\dfrac{1}{\sqrt{2\pi}}+(1-\theta)\dfrac{1}{2})\nonumber\\&\hspace{0.75cm}+ \log(\theta\dfrac{1}{\sqrt{2\pi}}e^{-2}+(1-\theta)\dfrac{1}{2}e^{-2})
+e^{-\mid 0\mid})\nonumber\\&\hspace{0.75cm}+\log(\theta\dfrac{1}{\sqrt{2\pi}} e^{-\dfrac{1}{2}2^{2}}+(1-\theta)\dfrac{1}{2}e^{-\mid 2\mid})
 \end{align}
-
+\begin{align}
+&=\log(\theta\dfrac{1}{\sqrt{2\pi}}+(1-\theta)\dfrac{1}{2})\nonumber\\&\hspace{0.75cm}+\log(\theta\dfrac{1}{\sqrt{2\pi}} e^{-2}+(1-\theta)\dfrac{1}{2}e^{-2})\\
+&=2\log(\theta\dfrac{1}{\sqrt{2\pi}}+(1-\theta)\dfrac{1}{2}) -2
+\end{align}
+Since likelihood $L(\theta) = e^{l(\theta)}$.\\ \\
+Likelihood function $L(\theta)$  at $\theta = 0, \frac{1}{2}, 1$ is given by
+\begin{enumerate}
+    \item At $\theta=0$ \hspace{0.5cm} $L(\theta=0)=\frac{1}{4}e^{-2}=0.0338$\\
+    \item At $\theta=1$ \hspace{0.5cm} $L(\theta=1)=\frac{1}{2\pi}e^{-2}=0.0215$\\
+    \item At $\theta=\frac{1}{2}$ \hspace{0.5cm}
+    $L(\theta=\frac{1}{2})=(\frac{1}{2\sqrt{2\pi}}+\frac{1}{4})^{2}e^{-2}=0.0273$
+\end{enumerate}
+Hence the maximum likelihood estimate of $\theta$ is at $\theta=0$
 
 \end{document}
